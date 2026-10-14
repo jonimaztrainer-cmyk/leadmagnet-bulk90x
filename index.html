@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Ganar músculo según tu perfil · Bulk90X</title>
+<meta name="description" content="Por qué no consigues ganar músculo según tu perfil, qué puedes hacer desde hoy y casos reales de clientes de Jon Imaz.">
+<meta property="og:title" content="Ganar músculo según tu perfil · Bulk90X"><meta property="og:description" content="Por qué no consigues ganar músculo según tu perfil, qué puedes hacer desde hoy y casos reales de clientes de Jon Imaz."><meta property="og:image" content="img/aleix.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html,body{margin:0}[hidden]{display:none!important}
+/* Layout: hero con 5 perfiles tocables → barra fija de perfiles → bandas alternas por perfil (por qué + consejos, luego casos) → CTA final */
+:root{
+ --bg:#ffffff; --band:#f7f5f2; --card:#ffffff; --ink:#151413; --muted:#6b6763; --line:#ebe7e2;
+ --orange:#FF6A13; --orange-ink:#c44f0a; --orange-soft:#fff1e7; --on-orange:#ffffff;
+ --wa:#15803d; --wa-hover:#116c33;
+ --shadow:0 1px 2px rgba(20,16,12,.05),0 10px 28px rgba(20,16,12,.07);
+ --f-display:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+ --f-body:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+ --bg:#141210; --band:#1c1916; --card:#221e1b; --ink:#f3efea; --muted:#a59e96; --line:#34302b;
+ --orange:#ff7a2b; --orange-ink:#ff9a5c; --orange-soft:#3a2416; --on-orange:#1a0d05;
+ --wa:#15803d; --wa-hover:#1a9449;
+ --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 28px rgba(0,0,0,.35); color-scheme:dark}}
+:root[data-theme="dark"]{
+ --bg:#141210; --band:#1c1916; --card:#221e1b; --ink:#f3efea; --muted:#a59e96; --line:#34302b;
+ --orange:#ff7a2b; --orange-ink:#ff9a5c; --orange-soft:#3a2416; --on-orange:#1a0d05;
+ --wa:#15803d; --wa-hover:#1a9449;
+ --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 28px rgba(0,0,0,.35); color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+h1,h2,h3,h4{font-family:var(--f-display);text-wrap:balance;margin:0}
+
+/* Hero */
+.hero .wrap{padding-block:36px 40px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:15px}
+.brand .dot{width:28px;height:28px;border-radius:8px;background:var(--orange);color:var(--on-orange);display:flex;align-items:center;justify-content:center;font-weight:900}
+.brand small{color:var(--muted);font-weight:600;font-size:14px}
+h1{font-size:clamp(30px,6.6vw,56px);line-height:1.04;letter-spacing:-.035em;font-weight:900;margin-top:28px;max-width:16ch}
+h1 .hl{color:var(--orange);display:block}
+.sub{font-size:clamp(16px,2.4vw,19px);color:var(--muted);max-width:60ch;margin:18px 0 0}
+.ask{font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--orange-ink);margin:32px 0 12px}
+.picks{display:grid;grid-template-columns:1fr;gap:10px;max-width:720px}
+.pick{display:flex;align-items:center;gap:14px;padding:16px 18px;border:1.5px solid var(--line);border-radius:14px;background:var(--card);text-decoration:none;font-weight:800;font-size:17px;letter-spacing:-.01em;transition:border-color .15s,transform .15s}
+.pick:hover{border-color:var(--orange);transform:translateX(3px)}
+.pick:focus-visible,.chip:focus-visible,.btn:focus-visible{outline:3px solid var(--orange);outline-offset:2px}
+.pick-n{flex:0 0 auto;width:30px;height:30px;border-radius:50%;background:var(--orange-soft);color:var(--orange-ink);display:flex;align-items:center;justify-content:center;font-size:14px;font-variant-numeric:tabular-nums}
+.pick span:nth-child(2){flex:1;min-width:0}
+.pick .arrow{color:var(--orange);font-size:18px}
+.sign{margin:22px 0 0;font-size:13.5px;color:var(--muted);font-weight:600}
+
+/* Barra fija de perfiles */
+.chipbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-block:1px solid var(--line)}
+.chips{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;max-width:1120px;margin:0 auto;padding-block:10px;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:0 0 auto;white-space:nowrap;text-decoration:none;font-size:13.5px;font-weight:700;padding:8px 14px;border-radius:999px;border:1.5px solid var(--line);background:var(--card);color:var(--ink)}
+.chip.on{background:var(--orange);border-color:var(--orange);color:var(--on-orange)}
+
+/* Perfiles */
+.profile{scroll-margin-top:56px}
+.profile:nth-of-type(odd){background:var(--band)}
+.profile .wrap{padding-block:56px 64px}
+.eyebrow{font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--orange-ink);margin:0 0 8px}
+.profile h2{font-size:clamp(28px,5vw,42px);line-height:1.08;letter-spacing:-.03em;font-weight:900}
+.intro{font-size:clamp(17px,2.4vw,20px);font-weight:600;margin:14px 0 0;max-width:56ch}
+.cols{display:grid;grid-template-columns:1fr;gap:28px;margin-top:32px}
+@media (min-width:860px){.cols{grid-template-columns:1fr 1.15fr;gap:48px}}
+.cols>div{min-width:0}
+.cols h3,.cases-title{font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:12px}
+.why p{margin:0 0 12px;max-width:60ch}
+.why em{font-style:normal;background:var(--orange-soft);color:var(--orange-ink);padding:0 4px;border-radius:4px;font-weight:700}
+.tips ol{list-style:none;counter-reset:t;margin:0;padding:0;display:grid;gap:14px}
+.tips li{counter-increment:t;position:relative;padding:16px 18px 16px 58px;background:var(--card);border:1px solid var(--line);border-radius:14px}
+.tips li::before{content:counter(t);position:absolute;left:16px;top:15px;width:28px;height:28px;border-radius:50%;background:var(--orange);color:var(--on-orange);font-weight:900;font-size:14px;display:flex;align-items:center;justify-content:center}
+.tips strong{display:block;font-weight:800;margin-bottom:2px}
+.cases-title{margin-top:48px}
+.cases{display:grid;grid-template-columns:1fr;gap:20px}
+@media (min-width:640px){.cases{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1000px){.cases{grid-template-columns:repeat(3,1fr)}}
+.case{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;min-width:0}
+.case img{width:100%;aspect-ratio:936/560;object-fit:cover;background:var(--band)}
+.case-body{padding:18px 18px 20px;display:flex;flex-direction:column;flex:1}
+.case-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.case h4{font-size:20px;font-weight:900;letter-spacing:-.02em}
+.result{background:var(--orange-soft);color:var(--orange-ink);font-size:12.5px;font-weight:800;padding:4px 10px;border-radius:999px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.case p{font-size:15px;margin:12px 0 0;flex:1}
+.quote{margin:14px 0 0;padding:10px 14px;border-left:3px solid var(--orange);background:var(--orange-soft);border-radius:0 8px 8px 0;font-size:14.5px;font-style:italic;font-weight:600}
+.case-acts{display:grid;gap:8px;margin-top:18px}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;text-align:center;text-decoration:none;font-weight:800;font-size:15px;padding:13px 16px;border-radius:12px;transition:background .15s,border-color .15s}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-wa:hover{background:var(--wa-hover)}
+.btn-ghost{border:1.5px solid var(--line);color:var(--ink);background:transparent;font-weight:700}
+.btn-ghost:hover{border-color:var(--muted)}
+
+/* Cierre */
+.final .wrap{padding-block:72px 64px;text-align:center}
+.final h2{font-size:clamp(26px,4.6vw,38px);line-height:1.1;letter-spacing:-.03em;font-weight:900;max-width:20ch;margin:0 auto}
+.final p{max-width:52ch;margin:16px auto 0;color:var(--muted);font-size:17px}
+.btn-big{display:inline-flex;margin-top:28px;font-size:17px;padding:16px 28px;border-radius:14px}
+footer .wrap{padding-block:24px 40px;text-align:center;font-size:12.5px;color:var(--muted);border-top:1px solid var(--line)}
+</style>
+</head><body>
+<header class="hero">
+ <div class="wrap">
+  <div class="brand"><span class="dot">B</span> Bulk90X <small>· Jon Imaz</small></div>
+  <h1>¿Por qué no consigues ganar músculo? <span class="hl">Depende de cuál de estos eres.</span></h1>
+  <p class="sub">No es falta de ganas. Cada perfil se atasca por un motivo distinto, y se desatasca de una forma distinta. Elige el tuyo y verás por qué te pasa, qué puedes hacer desde hoy y a quién le ha funcionado partiendo de donde estás tú.</p>
+  <p class="ask">¿Con cuál te identificas?</p>
+  <nav class="picks" aria-label="Perfiles"><a class="pick" href="#come-y-no-engorda"><span class="pick-n">1</span><span>Como mucho y no engordo</span><span class="arrow" aria-hidden="true">↓</span></a><a class="pick" href="#delgado-con-barriga"><span class="pick-n">2</span><span>Estoy delgado pero con barriga</span><span class="arrow" aria-hidden="true">↓</span></a><a class="pick" href="#estancado"><span class="pick-n">3</span><span>Llevo años entrenando y sigo igual</span><span class="arrow" aria-hidden="true">↓</span></a><a class="pick" href="#me-cuesta-comer"><span class="pick-n">4</span><span>Me cuesta comer</span><span class="arrow" aria-hidden="true">↓</span></a><a class="pick" href="#no-tengo-tiempo"><span class="pick-n">5</span><span>No tengo tiempo (trabajo y familia)</span><span class="arrow" aria-hidden="true">↓</span></a></nav>
+  <p class="sign">Jon Imaz · Dietista y entrenador especializado en ganancia muscular</p>
+ </div>
+</header>
+<div class="chipbar" aria-label="Ir a un perfil"><div class="chips"><a class="chip" href="#come-y-no-engorda" data-target="come-y-no-engorda">Como mucho y no engordo</a><a class="chip" href="#delgado-con-barriga" data-target="delgado-con-barriga">Estoy delgado pero con barriga</a><a class="chip" href="#estancado" data-target="estancado">Llevo años entrenando y sigo igual</a><a class="chip" href="#me-cuesta-comer" data-target="me-cuesta-comer">Me cuesta comer</a><a class="chip" href="#no-tengo-tiempo" data-target="no-tengo-tiempo">No tengo tiempo</a></div></div>
+<main>
+<section class="profile" id="come-y-no-engorda">
+ <div class="wrap">
+  <p class="eyebrow">Perfil 1</p>
+  <h2>Como mucho y no engordo</h2>
+  <p class="intro">Si te han dicho mil veces «qué suerte, comes lo que quieres y no engordas», esto es para ti.</p>
+  <div class="cols">
+   <div class="why"><h3>Por qué te pasa</h3><p>Casi nunca es que comas mucho. Es que comes mucho <em>algunos días</em>. Un día te pegas un atracón, al siguiente se te pasa una comida, y la media de la semana se queda corta.</p><p>Además, te mueves más de lo que crees: caminas, gesticulas, no paras quieto. Todo eso gasta. No tienes un metabolismo roto. Tienes un plan que no cubre lo que gastas.</p></div>
+   <div class="tips"><h3>Qué puedes hacer desde hoy</h3><ol><li><strong>Mira la media, no el día.</strong> Pésate 3 o 4 mañanas por semana, en ayunas, y apunta la media. Si en dos semanas no sube, añade un poco más de comida cada día. Sin dramas y sin atracones.</li><li><strong>Calorías que no llenan.</strong> Un chorro de aceite de oliva, un puñado de frutos secos, una cucharada de crema de cacahuete. Suman mucho y apenas ocupan sitio.</li><li><strong>Come a horas fijas, no cuando tengas hambre.</strong> Si esperas a tener hambre, nunca vas a llegar. Pon horario a tus comidas como lo pones al trabajo.</li><li><strong>Entrena para progresar, no para cansarte.</strong> Pocos ejercicios básicos, apunta los pesos y busca subir poco a poco. Y no te pases con el cardio: es justo lo que te sobra.</li></ol></div>
+  </div>
+  <h3 class="cases-title">Casos que se parecen al tuyo</h3>
+  <div class="cases">
+<article class="case">
+  <img src="img/dave.jpg" alt="Antes y después de Dave" width="936" height="560" loading="lazy">
+  <div class="case-body">
+   <div class="case-head"><h4>Dave</h4><span class="result">+5 kg · 6 meses</span></div>
+   <p>Toda su vida le llamaron «el flacucho». A los 42 años partía de 53 kg. No le frenaba el gimnasio: le frenaba no poder sostener la comida. Montamos una estructura adaptada a él, sin dietas extremas ni suplementos como base.</p><blockquote class="quote">«No tenía miedo al gimnasio, tenía miedo a no poder comer.»</blockquote>
+   <div class="case-acts">
+    <a class="btn btn-wa" href="https://wa.me/34648687933?text=Buenas%20Jon%20%F0%9F%91%8B%20He%20le%C3%ADdo%20la%20parte%20de%20%C2%ABcomo%20mucho%20y%20no%20engordo%C2%BB%20y%20me%20identifico%20con%20el%20caso%20de%20Dave%2C%20sobre%20todo%20porque%20" target="_blank" rel="noopener" data-ev="wa" data-p="come-y-no-engorda" data-c="dave">Me identifico con Dave</a>
+    <a class="btn btn-ghost" href="https://drive.google.com/file/d/18hC0ArLJs95TiPqDzsbVFY1TQMI-V_Js/view" target="_blank" rel="noopener" data-ev="entrevista" data-c="dave">Ver su entrevista ↗</a>
+   </div>
+  </div>
+ </article>
+<article class="case">
+  <img src="img/aleix.jpg" alt="Antes y después de Aleix" width="936" height="560" loading="lazy">
+  <div class="case-body">
+   <div class="case-head"><h4>Aleix</h4><span class="result">+10 kg · 6 meses</span></div>
+   <p>Aleix no venía de no intentarlo. Batidos, 5 o 6 comidas al día, gimnasio… y la báscula no se movía. No le faltaba comida, le faltaba estrategia.</p><blockquote class="quote">«Comía más que ahora y no subía.»</blockquote>
+   <div class="case-acts">
+    <a class="btn btn-wa" href="https://wa.me/34648687933?text=Buenas%20Jon%20%F0%9F%91%8B%20He%20le%C3%ADdo%20la%20parte%20de%20%C2%ABcomo%20mucho%20y%20no%20engordo%C2%BB%20y%20me%20identifico%20con%20el%20caso%20de%20Aleix%2C%20sobre%20todo%20porque%20" target="_blank" rel="noopener" data-ev="wa" data-p="come-y-no-engorda" data-c="aleix">Me identifico con Aleix</a>
+    <a class="btn btn-ghost" href="https://drive.google.com/file/d/1a5tTGnrDqtoUo-JLj8RfJuAm4l4sYj1x/view" target="_blank" rel="noopener" data-ev="entrevista" data-c="aleix">Ver su entrevista ↗</a>
+   </div>
+  </div>
+ </article>
+<article class="case">
+  <img src="img/claudio.jpg" alt="Antes y después de Claudio" width="936" height="560" loading="lazy">
+  <div class="case-body">
+   <div class="case-head"><h4>Claudio</h4><span class="result">+7 kg · 12 semanas</span></div>
+   <p>Claudio llevaba años comiendo sin orden hasta que decidió dejar de descuidarse. Con una estructura clara, sumó 7 kg en 12 semanas entrenando en casa.</p>
+   <div class="case-acts">
+    <a class="btn btn-wa" href="https://wa.me/34648687933?text=Buenas%20Jon%20%F0%9F%91%8B%20He%20le%C3%ADdo%20la%20parte%20de%20%C2%ABcomo%20mucho%20y%20no%20engordo%C2%BB%20y%20me%20identifico%20con%20el%20caso%20de%20Claudio%2C%20sobre%20todo%20porque%20" target="_blank" rel="noopener" data-ev="wa" data-p="come-y-no-engorda" data-c="claudio">Me identifico con Claudio</a>
+    <a class="btn btn-ghost" href="https://drive.google.com/file/d/1kgIlgKqHE9qXpO-fX05dPAbSgyG3GbcD/view" target="_blank" rel="noopener" data-ev="entrevista" data-c="claudio">Ver su entrevista ↗</a>
+   </div>
+  </div>
+ </article>
+  </div>
+ </div>
+</section>
+<section class="profile" id="delgado-con-barriga">
+ <div class="wrap">
+  <p class="eyebrow">Perfil 2</p>
+  <h2>Estoy delgado pero con barriga</h2>
+  <p class="intro">Con camiseta pareces delgado. Sin ella, no te gusta lo que ves. Ni flaco ni definido.</p>
+  <div class="cols">
+   <div class="why"><h3>Por qué te pasa</h3><p>No te falta peso, te falta músculo. Por eso estás atrapado: si haces volumen a lo loco, ganas barriga; si haces dieta, te quedas aún más flaco.</p><p>La salida no es elegir entre las dos. Es ganar músculo y perder grasa a la vez, y eso se puede cuando partes de donde estás tú.</p></div>
+   <div class="tips"><h3>Qué puedes hacer desde hoy</h3><ol><li><strong>Ni volumen ni dieta agresiva.</strong> Come cerca de lo que gastas, o muy poco por encima. Ni pasar hambre ni comer por comer.</li><li><strong>Sube la proteína.</strong> Pon una buena ración en cada comida: huevos, carne, pescado, lácteos o legumbres. Es lo que le dice al cuerpo que construya músculo y no grasa.</li><li><strong>La fuerza primero.</strong> Prioriza entrenar con pesas y subir cargas. El cardio puede sumar, pero no sustituye al entrenamiento de fuerza.</li><li><strong>No te fíes solo de la báscula.</strong> Mídete la cintura y hazte fotos cada 2 semanas. Puedes pesar lo mismo y tener otro físico.</li></ol></div>
+  </div>
+  <h3 class="cases-title">Casos que se parecen al tuyo</h3>
+  <div class="cases">
+<article class="case">
+  <img src="img/alex_mismopeso.jpg" alt="Antes y después de Alex" width="936" height="560" loading="lazy">
+  <div class="case-body">
+   <div class="case-head"><h4>Alex</h4><span class="result">10 semanas</span></div>
+   <p>Poco tiempo libre y mucho trabajo en la tienda. Lo que le faltaba era comprometerse consigo mismo de verdad. En 10 semanas cambió su composición corporal sin cambiar de peso: menos grasa, más músculo y más confianza.</p>
+   <div class="case-acts">
+    <a class="btn btn-wa" href="https://wa.me/34648687933?text=Buenas%20Jon%20%F0%9F%91%8B%20He%20le%C3%ADdo%20la%20parte%20de%20%C2%ABdelgado%20pero%20con%20barriga%C2%BB%20y%20me%20identifico%20con%20el%20caso%20de%20Alex%2C%20sobre%20todo%20porque%20" target="_blank" rel="noopener" data-ev="wa" data-p="delgado-con-barriga" data-c="alex_mismopeso">Me identifico con Alex</a>
+    <a class="btn btn-ghost" href="https://drive.google.com/file/d/1e52NswURe6hCLKnXYHlFB-kZ2Ymh1Wwr/view" target="_blank" rel="noopener" data-ev="entrevista" data-c="alex_mismopeso">Ver su entrevista ↗</a>
+   </div>
+  </div>
+ </article>
+<article class="case">
+  <img src="img/lino.jpg" alt="Antes y después de Lino" width="936" height="560" loading="lazy">
+  <div class="case-body">
+   <div class="case-head"><h4>Lino</h4><span class="result">6 meses</span></div>
+   <p>23 años, judo, gimnasio y CrossFit… y dos años igual. Su punto débil eran las semanas de estrés. Montamos un sistema que aguantara sus peores días.</p><blockquote class="quote">«Te quitas la camiseta y te da cosilla.»</blockquote>
+   <div class="case-acts">
+    <a class="btn btn-wa" href="https://wa.me/34648687933?text=Buenas%20Jon%20%F0%9F%91%8B%20He%20le%C3%ADdo%20la%20parte%20de%20%C2%ABdelgado%20pero%20con%20barriga%C2%BB%20y%20me%20identifico%20con%20el%20caso%20de%20Lino%2C%20sobre%20todo%20porque%20" target="_blank" rel="noopener" data-ev="wa" data-p="delgado-con-barriga" data-c="lino">Me identifico con Lino</a>
+    <a class="btn btn-ghost" href="https://drive.google.com/file/d/1XrYLGKzip4i50V1SWpmx4RWXYx4qSGqD/view" target="_blank" rel="noopener" data-ev="entrevista" data-c="lino">Ver su entrevista ↗</a>
+   </div>
+  </div>
+ </article>
+<article class="case">
+  <img src="img/jorge.jpg" alt="Antes y después de Jorge" width="936" height="560" loading="lazy">
+  <div class="case-body">
+   <div class="case-head"><h4>Jorge</h4><span class="result">12 semanas</span></div>
+   <p>A Jorge le frenaba el miedo a contratar humo. Cuando dio el paso, en 12 semanas recompuso su físico: menos grasa y más músculo.</p><blockquote class="quote">«Me arrepiento de no haberlo hecho antes.»</blockquote>
+   <div class="case-acts">
+    <a class="btn btn-wa" href="https://wa.me/34648687933?text=Buenas%20Jon%20%F0%9F%91%8B%20He%20le%C3%ADdo%20la%20parte%20de%20%C2%ABdelgado%20pero%20con%20barriga%C2%BB%20y%20me%20identifico%20con%20el%20caso%20de%20Jorge%2C%20sobre%20todo%20porque%20" target="_blank" rel="noopener" data-ev="wa" data-p="delgado-con-barriga" data-c="jorge">Me identifico con Jorge</a>
+    <a class="btn btn-ghost" href="https://drive.google.com/file/d/1KX08ukCI7znP6efE-aHYiHXOF7sjzMOp/view" target="_blank" rel="noopener" data-ev="entrevista" data-c="jorge">Ver su entrevista ↗</a>
+   </div>
+  </div>
+ </article>
+  </div>
+ </div>
+</section>
+<section class="profile" id="estancado">
+ <div class="wrap">
+  <p class="eyebrow">Perfil 3</p>
+  <h2>Llevo años entrenando y sigo igual</h2>
+  <p class="intro">Vas al gimnasio, no fallas, te esfuerzas… y las fotos de hace dos años son iguales que las de hoy.</p>
+  <div class="cols">
+   <div class="why"><h3>Por qué te pasa</h3><p>Tu cuerpo se ha acostumbrado a lo que le das. Mismos pesos, rutinas que cambias cada mes porque las has visto en internet y consejos sueltos que no encajan entre sí.</p><p>Y hay una pista que casi nadie mira: si tu peso lleva meses igual, no estás comiendo para crecer. Puedes entrenar perfecto, que sin material no se construye.</p></div>
+   <div class="tips"><h3>Qué puedes hacer desde hoy</h3><ol><li><strong>Apunta cada entrenamiento.</strong> Y busca ganarle algo a la semana anterior: una repetición más o un poco más de peso. Si no lo apuntas, no sabes si progresas.</li><li><strong>Un plan, de 8 a 12 semanas.</strong> Deja de cambiar de rutina cada mes. El músculo necesita tiempo con el mismo estímulo para responder.</li><li><strong>Revisa el plato, no solo el gimnasio.</strong> Si la báscula no se ha movido en meses, el problema está en lo que comes, no en cómo entrenas.</li><li><strong>Duerme 7 u 8 horas.</strong> El músculo se construye descansando, no levantando.</li></ol></div>
+  </div>
+  <h3 class="cases-title">Casos que se parecen al tuyo</h3>
+  <div class="cases">
+<article class="case">
+  <img src="img/ager.jpg" alt="Antes y después de Ager" width="936" height="560" loading="lazy">
+  <div class="case-body">
+   <div class="case-head"><h4>Ager</h4><span class="result">+7 kg · 3 meses</span></div>
+   <p>Ager llevaba años estancado en el mismo peso, cansado de entrenar sin ver mejoras. Con una estructura clara, a los 3 meses tuvo que renovar todo el armario.</p>
+   <div class="case-acts">
+    <a class="btn btn-wa" href="https://wa.me/34648687933?text=Buenas%20Jon%20%F0%9F%91%8B%20He%20le%C3%ADdo%20la%20parte%20de%20%C2%ABllevo%20a%C3%B1os%20entrenando%20y%20sigo%20igual%C2%BB%20y%20me%20identifico%20con%20el%20caso%20de%20Ager%2C%20sobre%20todo%20porque%20" target="_blank" rel="noopener" data-ev="wa" data-p="estancado" data-c="ager">Me identifico con Ager</a>
+    <a class="btn btn-ghost" href="https://drive.google.com/file/d/1XC2-B_vc7eDxG7DPf75ms8XX0KpehAfO/view" target="_blank" rel="noopener" data-ev="entrevista" data-c="ager">Ver su entrevista ↗</a>
+   </div>
+  </div>
+ </article>
+<article class="case">
+  <img src="img/angel.jpg" alt="Antes y después de Ángel" width="936" height="560" loading="lazy">
+  <div class="case-body">
+   <div class="case-head"><h4>Ángel</h4><span class="result">+4,8 kg · 3 meses</span></div>
+   <p>Había probado con muchísimos entrenadores y ninguno le dio resultado. Se estaba dando por vencido. Se tiró a la piscina y en 3 meses lo conseguimos.</p><blockquote class="quote">«Dudé mucho al principio.»</blockquote>
+   <div class="case-acts">
+    <a class="btn btn-wa" href="https://wa.me/34648687933?text=Buenas%20Jon%20%F0%9F%91%8B%20He%20le%C3%ADdo%20la%20parte%20de%20%C2%ABllevo%20a%C3%B1os%20entrenando%20y%20sigo%20igual%C2%BB%20y%20me%20identifico%20con%20el%20caso%20de%20%C3%81ngel%2C%20sobre%20todo%20porque%20" target="_blank" rel="noopener" data-ev="wa" data-p="estancado" data-c="angel">Me identifico con Ángel</a>
+    <a class="btn btn-ghost" href="https://drive.google.com/file/d/1Ek9S0w6oukaV4-AKPHYLO7Rw0hd3juH9/view" target="_blank" rel="noopener" data-ev="entrevista" data-c="angel">Ver su entrevista ↗</a>
+   </div>
+  </div>
+ </article>
+<article class="case">
+  <img src="img/sergi.jpg" alt="Antes y después de Sergi" width="936" height="560" loading="lazy">
+  <div class="case-body">
+   <div class="case-head"><h4>Sergi</h4><span class="result">+5,8 kg · 6 meses</span></div>
+   <p>Sergi llevaba años estancado. Quería una estructura compatible con su vida y con la escalada, sin renunciar a lo que le gustaba.</p>
+   <div class="case-acts">
+    <a class="btn btn-wa" href="https://wa.me/34648687933?text=Buenas%20Jon%20%F0%9F%91%8B%20He%20le%C3%ADdo%20la%20parte%20de%20%C2%ABllevo%20a%C3%B1os%20entrenando%20y%20sigo%20igual%C2%BB%20y%20me%20identifico%20con%20el%20caso%20de%20Sergi%2C%20sobre%20todo%20porque%20" target="_blank" rel="noopener" data-ev="wa" data-p="estancado" data-c="sergi">Me identifico con Sergi</a>
+    <a class="btn btn-ghost" href="https://drive.google.com/file/d/1tAK2uJonxrQ0GHdws5jHsUS7I35huGQw/view" target="_blank" rel="noopener" data-ev="entrevista" data-c="sergi">Ver su entrevista ↗</a>
+   </div>
+  </div>
+ </article>
+  </div>
+ </div>
+</section>
+<section class="profile" id="me-cuesta-comer">
+ <div class="wrap">
+  <p class="eyebrow">Perfil 4</p>
+  <h2>Me cuesta comer</h2>
+  <p class="intro">Sabes que tienes que comer más. El problema es que no te entra.</p>
+  <div class="cols">
+   <div class="why"><h3>Por qué te pasa</h3><p>Te llenas rápido, y un plato enorme a mediodía te quita las ganas de la cena. Así que te fuerzas un día, lo pasas mal y al siguiente comes menos.</p><p>Forzarte no funciona. Lo que funciona es que comer más te cueste menos: más energía en menos volumen y repartida en el día.</p></div>
+   <div class="tips"><h3>Qué puedes hacer desde hoy</h3><ol><li><strong>Más calorías en el mismo plato.</strong> Añade aceite de oliva, frutos secos, aguacate o crema de cacahuete a lo que ya comes. El plato no crece; lo que aporta, sí.</li><li><strong>Bebe parte de las calorías.</strong> Un batido casero de leche, avena, plátano y crema de cacahuete entra mucho mejor que otro plato. Y evita beber mucha agua justo durante las comidas.</li><li><strong>Comidas más pequeñas, más veces.</strong> Reparte en 4 o 5 tomas a horas fijas en lugar de 3 platos enormes.</li><li><strong>Come lo que te sienta bien.</strong> Si algo te pesa o te sienta mal, cámbialo. Comer con malestar solo te hace comer menos al día siguiente.</li></ol></div>
+  </div>
+  <h3 class="cases-title">Casos que se parecen al tuyo</h3>
+  <div class="cases">
+<article class="case">
+  <img src="img/dave.jpg" alt="Antes y después de Dave" width="936" height="560" loading="lazy">
+  <div class="case-body">
+   <div class="case-head"><h4>Dave</h4><span class="result">+5 kg · 6 meses</span></div>
+   <p>A los 42 años partía de 53 kg, sin apetito y con el estómago delicado. Montamos una estructura adaptada a su apetito y sus horarios, sin dietas extremas ni suplementos como base.</p><blockquote class="quote">«No tenía miedo al gimnasio, tenía miedo a no poder comer.»</blockquote>
+   <div class="case-acts">
+    <a class="btn btn-wa" href="https://wa.me/34648687933?text=Buenas%20Jon%20%F0%9F%91%8B%20He%20le%C3%ADdo%20la%20parte%20de%20%C2%ABme%20cuesta%20comer%C2%BB%20y%20me%20identifico%20con%20el%20caso%20de%20Dave%2C%20sobre%20todo%20porque%20" target="_blank" rel="noopener" data-ev="wa" data-p="me-cuesta-comer" data-c="dave">Me identifico con Dave</a>
+    <a class="btn btn-ghost" href="https://drive.google.com/file/d/18hC0ArLJs95TiPqDzsbVFY1TQMI-V_Js/view" target="_blank" rel="noopener" data-ev="entrevista" data-c="dave">Ver su entrevista ↗</a>
+   </div>
+  </div>
+ </article>
+<article class="case">
+  <img src="img/pablo_gan.jpg" alt="Antes y después de Pablo" width="936" height="560" loading="lazy">
+  <div class="case-body">
+   <div class="case-head"><h4>Pablo</h4><span class="result">+6,5 kg · 3 meses</span></div>
+   <p>Pablo estaba cansado de comer: su actividad diaria le hacía difícil sostener las comidas. Con una estrategia adaptada a su día a día, a los 3 meses la ropa ya no le entraba.</p>
+   <div class="case-acts">
+    <a class="btn btn-wa" href="https://wa.me/34648687933?text=Buenas%20Jon%20%F0%9F%91%8B%20He%20le%C3%ADdo%20la%20parte%20de%20%C2%ABme%20cuesta%20comer%C2%BB%20y%20me%20identifico%20con%20el%20caso%20de%20Pablo%2C%20sobre%20todo%20porque%20" target="_blank" rel="noopener" data-ev="wa" data-p="me-cuesta-comer" data-c="pablo_gan">Me identifico con Pablo</a>
+    <a class="btn btn-ghost" href="https://drive.google.com/file/d/1VbEf0PiwIIUt4hyuiBWuZdH7BpBbexQU/view" target="_blank" rel="noopener" data-ev="entrevista" data-c="pablo_gan">Ver su entrevista ↗</a>
+   </div>
+  </div>
+ </article>
+<article class="case">
+  <img src="img/aleix.jpg" alt="Antes y después de Aleix" width="936" height="560" loading="lazy">
+  <div class="case-body">
+   <div class="case-head"><h4>Aleix</h4><span class="result">+10 kg · 6 meses</span></div>
+   <p>Batidos, 5 o 6 comidas al día… Aleix comía más cantidad que nunca y no subía. El problema no era comer poco, era comer sin estrategia. Cuando se la dimos, ganó 10 kg comiendo menos que antes.</p><blockquote class="quote">«Comía más que ahora y no subía.»</blockquote>
+   <div class="case-acts">
+    <a class="btn btn-wa" href="https://wa.me/34648687933?text=Buenas%20Jon%20%F0%9F%91%8B%20He%20le%C3%ADdo%20la%20parte%20de%20%C2%ABme%20cuesta%20comer%C2%BB%20y%20me%20identifico%20con%20el%20caso%20de%20Aleix%2C%20sobre%20todo%20porque%20" target="_blank" rel="noopener" data-ev="wa" data-p="me-cuesta-comer" data-c="aleix">Me identifico con Aleix</a>
+    <a class="btn btn-ghost" href="https://drive.google.com/file/d/1a5tTGnrDqtoUo-JLj8RfJuAm4l4sYj1x/view" target="_blank" rel="noopener" data-ev="entrevista" data-c="aleix">Ver su entrevista ↗</a>
+   </div>
+  </div>
+ </article>
+  </div>
+ </div>
+</section>
+<section class="profile" id="no-tengo-tiempo">
+ <div class="wrap">
+  <p class="eyebrow">Perfil 5</p>
+  <h2>No tengo tiempo (trabajo y familia)</h2>
+  <p class="intro">Trabajo, familia, mil cosas. Entrenar siempre acaba al final de la lista.</p>
+  <div class="cols">
+   <div class="why"><h3>Por qué te pasa</h3><p>No te falta tiempo. Te falta un plan que quepa en el tiempo que tienes. Casi todas las rutinas están pensadas para alguien que puede entrenar 5 o 6 días y cocinar cada comida.</p><p>Cuando el plan no encaja con tu vida, lo dejas a las tres semanas. Y no es falta de disciplina: es que el plan estaba mal hecho para ti.</p></div>
+   <div class="tips"><h3>Qué puedes hacer desde hoy</h3><ol><li><strong>Con 2 o 3 días basta.</strong> Entrenamientos de cuerpo completo, intensos y con progresión. Mejor 3 días que cumples que 5 que abandonas.</li><li><strong>En casa también se avanza.</strong> Si un día no llegas al gimnasio, unas mancuernas y un plan bien hecho dan para mucho.</li><li><strong>Comidas fáciles y repetibles.</strong> Ten 3 o 4 platos que te gusten y cocina para varios días. No necesitas variedad, necesitas constancia.</li><li><strong>El sueño también cuenta.</strong> Con poco descanso y mucho estrés, el cuerpo no construye. Protege tus horas de sueño tanto como tus entrenos.</li></ol></div>
+  </div>
+  <h3 class="cases-title">Casos que se parecen al tuyo</h3>
+  <div class="cases">
+<article class="case">
+  <img src="img/jesus.jpg" alt="Antes y después de Jesús" width="936" height="560" loading="lazy">
+  <div class="case-body">
+   <div class="case-head"><h4>Jesús</h4><span class="result">+6 kg · 3 meses</span></div>
+   <p>Se levanta a las 04:45 para llegar a su trabajo, su emprendimiento y su familia. Lo conseguimos con solo 3 entrenamientos semanales, sin depender de una disponibilidad irreal.</p>
+   <div class="case-acts">
+    <a class="btn btn-wa" href="https://wa.me/34648687933?text=Buenas%20Jon%20%F0%9F%91%8B%20He%20le%C3%ADdo%20la%20parte%20de%20%C2%ABno%20tengo%20tiempo%C2%BB%20y%20me%20identifico%20con%20el%20caso%20de%20Jes%C3%BAs%2C%20sobre%20todo%20porque%20" target="_blank" rel="noopener" data-ev="wa" data-p="no-tengo-tiempo" data-c="jesus">Me identifico con Jesús</a>
+    <a class="btn btn-ghost" href="https://drive.google.com/file/d/1G6wEeSS79-3rbJKHjjZqO0pibX_qxDWK/view" target="_blank" rel="noopener" data-ev="entrevista" data-c="jesus">Ver su entrevista ↗</a>
+   </div>
+  </div>
+ </article>
+<article class="case">
+  <img src="img/alvaro.jpg" alt="Antes y después de Álvaro" width="936" height="560" loading="lazy">
+  <div class="case-body">
+   <div class="case-head"><h4>Álvaro</h4><span class="result">+6,7 kg · 12 semanas</span></div>
+   <p>Con mil responsabilidades encima, las primeras 8 semanas entrenó solo 2 días en casa; las últimas 4, 3 días en el gimnasio. Sumó 6,7 kg.</p>
+   <div class="case-acts">
+    <a class="btn btn-wa" href="https://wa.me/34648687933?text=Buenas%20Jon%20%F0%9F%91%8B%20He%20le%C3%ADdo%20la%20parte%20de%20%C2%ABno%20tengo%20tiempo%C2%BB%20y%20me%20identifico%20con%20el%20caso%20de%20%C3%81lvaro%2C%20sobre%20todo%20porque%20" target="_blank" rel="noopener" data-ev="wa" data-p="no-tengo-tiempo" data-c="alvaro">Me identifico con Álvaro</a>
+    <a class="btn btn-ghost" href="https://drive.google.com/file/d/1tqwAK_1kaZoQ1QxQ_TVvfpSCS9kSQmTo/view" target="_blank" rel="noopener" data-ev="entrevista" data-c="alvaro">Ver su entrevista ↗</a>
+   </div>
+  </div>
+ </article>
+<article class="case">
+  <img src="img/jaume.jpg" alt="Antes y después de Jaume" width="936" height="560" loading="lazy">
+  <div class="case-body">
+   <div class="case-head"><h4>Jaume</h4><span class="result">+6 kg · 12 semanas</span></div>
+   <p>Jaume llevaba mucho tiempo posponiéndolo hasta que se dijo: ahora o nunca. Se lo tomó como un reto personal y en 12 semanas ganó más de 6 kg.</p><blockquote class="quote">«Si yo he podido, todo el mundo puede.»</blockquote>
+   <div class="case-acts">
+    <a class="btn btn-wa" href="https://wa.me/34648687933?text=Buenas%20Jon%20%F0%9F%91%8B%20He%20le%C3%ADdo%20la%20parte%20de%20%C2%ABno%20tengo%20tiempo%C2%BB%20y%20me%20identifico%20con%20el%20caso%20de%20Jaume%2C%20sobre%20todo%20porque%20" target="_blank" rel="noopener" data-ev="wa" data-p="no-tengo-tiempo" data-c="jaume">Me identifico con Jaume</a>
+    <a class="btn btn-ghost" href="https://drive.google.com/file/d/1NNRyO6FQzGOc0VTV93VXAyJ5SdRn-Wv3/view" target="_blank" rel="noopener" data-ev="entrevista" data-c="jaume">Ver su entrevista ↗</a>
+   </div>
+  </div>
+ </article>
+  </div>
+ </div>
+</section>
+<section class="final">
+ <div class="wrap">
+  <h2>¿Te has visto en más de un perfil? ¿O en ninguno?</h2>
+  <p>Es normal. Casi nadie encaja en uno solo, y por eso un plan genérico no funciona. Escríbeme, cuéntame tu caso y te digo por dónde empezaría yo.</p>
+  <a class="btn btn-wa btn-big" href="https://wa.me/34648687933?text=Buenas%20Jon%20%F0%9F%91%8B%20He%20visto%20la%20web%20de%20los%20perfiles%20y%20quiero%20contarte%20mi%20caso%3A%20" target="_blank" rel="noopener" data-ev="wa" data-p="general">Escribir a Jon por WhatsApp</a>
+ </div>
+</section>
+</main>
+<footer><div class="wrap">Casos reales de clientes de Bulk90X. Resultados individuales; cada proceso es distinto.</div></footer>
+<script>
+(function(){
+ var chips=[].slice.call(document.querySelectorAll('.chip'));
+ var secs=chips.map(function(c){return document.getElementById(c.dataset.target)});
+ function onScroll(){
+  var y=window.scrollY+140, cur=-1;
+  secs.forEach(function(s,i){ if(s.offsetTop<=y) cur=i; });
+  chips.forEach(function(c,i){ var on=i===cur; if(on!==c.classList.contains('on')){ c.classList.toggle('on',on); if(on) c.scrollIntoView({block:'nearest',inline:'center',behavior:'smooth'}); } });
+ }
+ window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+ document.addEventListener('click',function(ev){
+  var a=ev.target.closest('[data-ev]'); if(!a) return;
+  try{ if(window.fbq) fbq('trackCustom', a.dataset.ev==='wa'?'ClickWhatsApp':'VerEntrevista', {perfil:a.dataset.p||'', caso:a.dataset.c||''}); }catch(e){}
+ });
+})();
+</script>
+</body></html>
